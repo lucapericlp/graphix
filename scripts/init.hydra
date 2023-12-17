@@ -1,0 +1,46 @@
+
+function r(min = 0, max = 1) {
+	return Math.random() * (max - min) + min;
+}
+
+
+osc(8,-0.5, 1)
+  .color(1.5, 1, -1)
+  .blend(o0)
+  .rotate(-0.5, -0.5)
+  .modulateRepeatX(osc(() => cc[24]*10))
+  /*.modulate(
+  	shape(2)
+    .rotate(0.5, 0.5)
+    .scale(2)
+    .repeatX(2, 2)
+    .modulate(o0, () => mouse.x * 0.0005)
+    .repeatY(2, 2))*/
+  .out(o0)
+
+/*solid(0, 0, 0).color(0, 0, 0)
+.diff(
+	shape([5.166, 4, 2.92, 12].smooth().fast(1), () => cc[24], 0.05)
+    .repeat(10, 10)
+  	.modulateScrollY(osc(() => cc[23]*10),0.5,0)
+).out()*/
+
+/*solid(1, 1, 0.845)
+	.diff(shape([5.166, 4, 2.92, 24].smooth()
+			.fast(5), r(0.6, 0.93), .09)
+		.repeat(15, 10))
+	.modulateScale(osc(8)
+		.rotate(r(-.5, 0.053)), .52)
+	.modulateScale(
+  		osc(1).rotate(0.2).diff(osc(100)))
+	.add(src(o0)
+		.scale(0.965)
+		.rotate(0.013 * Math.round(r(-2, 1)))
+		.color(r(), r(), r())
+		.modulateRotate(o0, r(0, 0.451))
+		.brightness(a.fft[0]*2), .7)
+	.out();*/
+
+
+a.show()
+a.setSmooth(0.5)
