@@ -28,3 +28,14 @@ osc(100,0.1,1)
 	//.blend(src(o1).modulate(o1, 0.04))
 	//.scale(1,1,()=>window.innerWidth/window.innerHeight)
   	.out(o0)
+
+// third one
+osc(100, 0.04, 1.2)
+  .hue(1.9)
+  .saturate(-2)
+  .rotate([1, 0, 1, 0])
+  .modulateScale(noise(5))
+  .modulateScrollY(osc(5, 0.1, 0))
+  .pixelate([5, 10, 20, 40, 80, 160, 320, 320, 320, 160, 80, 40, 20, 10, 5], 1e10)
+  .out()
+
