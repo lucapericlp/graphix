@@ -1,4 +1,4 @@
-const PERiPERiDEFAULTS => async () => {
+const PERiPERiDEFAULTS = async () => {
   await loadScript("https://hyper-hydra.glitch.me/hydra-text.js")
   await loadScript("https://hyper-hydra.glitch.me/hydra-tap.js")
 
