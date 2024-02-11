@@ -13,4 +13,10 @@ const PERiPERiDEFAULTS = async () => {
 
   fade_schedule = _.range(0, 1.1, 0.005).concat(_.fill(Array(20), 1));
   const fadeOut = (subject, output) => subject.mult(shape(4).scale(5).color(0,0,0), fade_schedule).out(output)
+
+  document.addEventListener('keydown', function(event) {
+      if (event.ctrlKey && event.altKey && event.metaKey) {
+          bpm = 0
+      }
+  });
 }
