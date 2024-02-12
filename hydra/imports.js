@@ -16,7 +16,7 @@ const PERiPERiDEFAULTS = async () => {
 
   document.addEventListener('keydown', function(event) {
       if (event.ctrlKey && event.altKey && event.metaKey) {
-          bpm = 0
+          bpm = 1
       }
   });
 }
