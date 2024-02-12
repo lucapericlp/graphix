@@ -28,3 +28,12 @@ solid(beats(1).curve(1),0,0).out(o1)
 solid(beats(1),0,0).out(o2)
 solid(() => beats(1).curve(3)(),0,0).out(o3)
 render()*/
+
+
+// hexagon grid
+shape(6)
+	.scale(3, ()=>innerHeight/innerWidth)
+	.repeat(3,3)
+	.modulateScale(osc(2, 0.2))
+	.color(beats(4), 0, 0)
+	.out()
