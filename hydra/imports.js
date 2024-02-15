@@ -46,6 +46,7 @@ const PERiPERiDEFAULTS = async () => {
       console.log('Midi received on cc#' + index + ' value:' + arr[2])    // uncomment to monitor incoming Midi
       console.log(arr)
       var val = (arr[2]+1)/128.0  // normalize CC values to 0.0 - 1.0
+      // TODO: special logic for "toggle button" MIDI types
       cc[[side_qualifier, index]]=val
   }
 
