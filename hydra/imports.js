@@ -19,4 +19,55 @@ const PERiPERiDEFAULTS = async () => {
           bpm = 1
       }
   });
+
+  navigator.requestMIDIAccess()
+      .then(onMIDISuccess, onMIDIFailure);
+
+  function onMIDISuccess(midiAccess) {
+      console.log(midiAccess);
+      var inputs = midiAccess.inputs;
+      var outputs = midiAccess.outputs;
+      for (var input of midiAccess.inputs.values()){
+          input.onmidimessage = getMIDIMessage;
+      }
+  }
+
+  function onMIDIFailure() {
+      console.log('Could not access your MIDI devices.');
+  }
+
+  //create an array to hold our cc values and init to a normalized value
+  var cc = new Map()
+
+  getMIDIMessage = function(midiMessage) {
+      var arr = midiMessage.data
+      var side_qualifier = arr[0]
+      var index = arr[1]
+      console.log('Midi received on cc#' + index + ' value:' + arr[2])    // uncomment to monitor incoming Midi
+      console.log(arr)
+      var val = (arr[2]+1)/128.0  // normalize CC values to 0.0 - 1.0
+      cc[[side_qualifier, index]]=val
+  }
+
+  ddj = {
+    0: [176, 7], // LH
+    1: [176, 11], // LM
+    2: [176, 15], // LL
+    3: [176, 23], // LFX
+    4: [176, 19], // LSLIDER
+    5: [177, 7], // RH
+    6: [177, 11], // RM
+    7: [177, 15], // RL
+    8: [182, 24], // RFX
+    9: [177, 19], // RSLIDER, 177
+    10: [150, 89], // TransitionFX
+    11: [182, 31], // Horizontal SLIDER or 63
+    12: [144, 12], // LCUE
+    13: [144, 11], // LPLAY
+    14: [144, 88], // LBeatSync - DO NOT USE
+    15: [145, 12], // RCUE
+    16: [145, 11], // RPLAY
+    17: [145, 88], // RBeatSync - DO NOT USE
+  }
+
 }
