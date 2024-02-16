@@ -36,7 +36,6 @@ const PERiPERiDEFAULTS = async () => {
       console.log('Could not access your MIDI devices.');
   }
 
-  //create an array to hold our cc values and init to a normalized value
   var cc = new Map()
 
   getMIDIMessage = function(midiMessage) {
@@ -51,24 +50,24 @@ const PERiPERiDEFAULTS = async () => {
   }
 
   ddj = {
-    "LH": [176, 7], // LH
-    "LM": [176, 11], // LM
-    "LL": [176, 15], // LL
-    "LFX": [176, 23], // LFX
-    "LSLIDER": [176, 19], // LSLIDER
-    "RH": [177, 7], // RH
-    "RM": [177, 11], // RM
-    "RL": [177, 15], // RL
-    "RFX": [182, 24], // RFX
-    "RSLIDER": [177, 19], // RSLIDER, 177
-    "TFX": [150, 89], // TransitionFX
-    "HSLIDER": [182, 31], // Horizontal SLIDER or 63
-    "LCLUE": [144, 12], // LCUE
-    "LPLAY": [144, 11], // LPLAY
-    "LBEATSYNC": [144, 88], // LBeatSync - DO NOT USE
-    "RCUE": [145, 12], // RCUE
-    "RPLAY": [145, 11], // RPLAY
-    "RBEATSYNC": [145, 88], // RBeatSync - DO NOT USE
+    "LH": cc[[176, 7]],
+    "LM": cc[[176, 11]],
+    "LL": cc[[176, 15]],
+    "LFX": cc[[176, 23]],
+    "LSLIDER": cc[[176, 19]],
+    "RH": cc[[177, 7]],
+    "RM": cc[[177, 11]],
+    "RL": cc[[177, 15]],
+    "RFX": cc[[182, 24]],
+    "RSLIDER": cc[[177, 19]],
+    "TFX": cc[[150, 89]],
+    "HSLIDER": cc[[182, 31]],
+    "LCLUE": cc[[144, 12]],
+    "LPLAY": cc[[144, 11]],
+    "LBEATSYNC": cc[[144, 88]],
+    "RCUE": cc[[145, 12]],
+    "RPLAY": cc[[145, 11]],
+    "RBEATSYNC": cc[[145, 88]],
   }
 
 }
