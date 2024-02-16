@@ -51,24 +51,24 @@ const PERiPERiDEFAULTS = async () => {
   }
 
   ddj = {
-    0: [176, 7], // LH
-    1: [176, 11], // LM
-    2: [176, 15], // LL
-    3: [176, 23], // LFX
-    4: [176, 19], // LSLIDER
-    5: [177, 7], // RH
-    6: [177, 11], // RM
-    7: [177, 15], // RL
-    8: [182, 24], // RFX
-    9: [177, 19], // RSLIDER, 177
-    10: [150, 89], // TransitionFX
-    11: [182, 31], // Horizontal SLIDER or 63
-    12: [144, 12], // LCUE
-    13: [144, 11], // LPLAY
-    14: [144, 88], // LBeatSync - DO NOT USE
-    15: [145, 12], // RCUE
-    16: [145, 11], // RPLAY
-    17: [145, 88], // RBeatSync - DO NOT USE
+    "LH": [176, 7], // LH
+    "LM": [176, 11], // LM
+    "LL": [176, 15], // LL
+    "LFX": [176, 23], // LFX
+    "LSLIDER": [176, 19], // LSLIDER
+    "RH": [177, 7], // RH
+    "RM": [177, 11], // RM
+    "RL": [177, 15], // RL
+    "RFX": [182, 24], // RFX
+    "RSLIDER": [177, 19], // RSLIDER, 177
+    "TFX": [150, 89], // TransitionFX
+    "HSLIDER": [182, 31], // Horizontal SLIDER or 63
+    "LCLUE": [144, 12], // LCUE
+    "LPLAY": [144, 11], // LPLAY
+    "LBEATSYNC": [144, 88], // LBeatSync - DO NOT USE
+    "RCUE": [145, 12], // RCUE
+    "RPLAY": [145, 11], // RPLAY
+    "RBEATSYNC": [145, 88], // RBeatSync - DO NOT USE
   }
 
 }
