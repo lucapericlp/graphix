@@ -1,13 +1,13 @@
 const PERiPERiDEFAULTS = async () => {
-  // await loadScript("https://hyper-hydra.glitch.me/hydra-text.js")
-  // await loadScript("https://hyper-hydra.glitch.me/hydra-tap.js")
-  // await loadScript("https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js")
-  await loadScript("hydra-text.js")
-  await loadScript("hydra-tap.js")
-  await loadScript("lodash.min.js")
+  await loadScript("https://hyper-hydra.glitch.me/hydra-text.js")
+  await loadScript("https://hyper-hydra.glitch.me/hydra-tap.js")
+  await loadScript("https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js")
+  //await loadScript("hydra-text.js")
+  //await loadScript("hydra-tap.js")
+  //await loadScript("lodash.min.js")
 
-  // const myFont = new FontFace('PressStart', 'url(https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2');
-  const myFont = new FontFace('PressStart', 'url(press-start.woff2)');
+  const myFont = new FontFace('PressStart', 'url(https://fonts.gstatic.com/s/pressstart2p/v15/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2');
+  // const myFont = new FontFace('PressStart', 'url(press-start.woff2)');
   await myFont.load();
   document.fonts.add(myFont);
 
